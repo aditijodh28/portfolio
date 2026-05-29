@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditi Jodh | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+    }
+
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#0f172a;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#38bdf8;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:25px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    section{
+      padding:100px 8%;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      max-width:600px;
+      animation:fadeIn 1.5s ease;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      margin-bottom:10px;
+    }
+
+    .hero-text h1 span{
+      color:#38bdf8;
+    }
+
+    .hero-text h3{
+  font-size:28px;
+  color:#94a3b8;
+  margin-bottom:20px;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:3px solid #38bdf8;
+  display:inline-block;
+  max-width:100%;
+  animation:typing 4s steps(30,end) infinite alternate;
+}
+
+    .hero-text p{
+      line-height:1.8;
+      margin-bottom:30px;
+      color:#cbd5e1;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 28px;
+      background:#38bdf8;
+      color:#0f172a;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      margin-right:15px;
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 20px #38bdf8;
+    }
+
+    .aditi-img img{
+      width:320px;
+      height:320px;
+      object-fit:cover;
+      border-radius:50%;
+      border:5px solid #38bdf8;
+      box-shadow:0 0 30px #38bdf8;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:40px;
+      color:#38bdf8;
+    }
+
+    .about p{
+      text-align:center;
+      max-width:800px;
+      margin:auto;
+      line-height:1.8;
+      color:#cbd5e1;
+    }
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .skill-box{
+      background:#1e293b;
+      padding:30px;
+      text-align:center;
+      border-radius:15px;
+      transition:0.3s;
+    }
+
+    .skill-box:hover{
+      transform:translateY(-10px);
+      background:#38bdf8;
+      color:#0f172a;
+      box-shadow:0 0 20px #38bdf8;
+    }
+
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .project-card{
+  background:#1e293b;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
+
+.project-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+  border-bottom:2px solid rgba(56,189,248,0.3);
+  transition:0.4s ease;
+}
+
+.project-card:hover img{
+  transform:scale(1.05);
+}
+
+.project-content{
+  padding:25px;
+}
+
+.project-card h3{
+  margin-bottom:15px;
+  color:#38bdf8;
+  font-size:24px;
+}
+
+.project-card p{
+  color:#cbd5e1;
+  margin-bottom:20px;
+  line-height:1.7;
+}
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      color:#cbd5e1;
+    }
+
+    .socials a{
+      margin:0 10px;
+      color:white;
+      font-size:28px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .socials a:hover{
+      color:#38bdf8;
+      transform:scale(1.2);
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      color:#94a3b8;
+    }
+
+    @keyframes typing{
+  from{
+    width:0;
+  }
+  to{
+    width:360px;
+  }
+}
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+      100%{
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        justify-content:center;
+        height:auto;
+        padding-top:120px;
+      }
+
+      .aditi-img img{
+        width:250px;
+        height:250px;
+        margin-bottom:40px;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      header{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .hero-text h3{
+        font-size:22px;
+      }
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Aditi Jodh.</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Aditi</span></h1>
+
+      <h3>Full-Stack Developer</h3>
+
+      <p>
+        Full-Stack Developer passionate about building AI-powered and scalable web applications.
+      </p>
+
+      <a href="resume.pdf" download class="btn">Download Resume</a>
+
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+
+    <div class="aditi-img">
+      <img src="aditi.png" alt="Aditi Photo">
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <p>
+    I am a passionate and self-motivated Engineering student with a strong interest in Full-Stack Development, Artificial Intelligence, and Problem Solving. I enjoy building responsive and user-friendly websites while continuously exploring modern technologies like the MERN Stack, Python, Streamlit, and AI-powered tools. 
+
+I am enthusiastic about learning new skills, participating in hackathons, coding competitions, and tech communities to improve my technical and analytical abilities. I believe in turning creative ideas into real-world digital solutions through clean code, innovation, and continuous learning.
+
+Apart from development, I am also interested in UI/UX design, GitHub projects, and building impactful applications that solve real-life problems. My goal is to grow as a software developer and contribute to innovative technology-driven projects.
+    </p>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2 class="title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Python</div>
+      <div class="skill-box">MySQL</div>
+      <div class="skill-box">GitHub</div>
+      <div class="skill-box">DSA</div>
+      <div class="skill-box">AI Tools</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2 class="title">Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+
+  <img src="yolo.png" alt="YOLO Project">
+
+  <div class="project-content">
+
+    <h3>YOLO Object Detection</h3>
+
+    <p>
+      AI-powered object detection system using YOLO and Python for
+      real-time object recognition and computer vision applications.
+    </p>
+
+    <a href="https://github.com/aditijodh28/yolo-object-detection"
+       target="_blank"
+       class="btn">
+       GitHub
+    </a>
+
+  </div>
+
+</div>
+     <div class="project-card">
+
+  <img src="portfolio.png" alt="Portfolio Website">
+
+  <div class="project-content">
+
+    <h3>Portfolio Website</h3>
+
+    <p>
+      Responsive personal portfolio website built using HTML, CSS,
+      and JavaScript with modern UI design, smooth animations,
+      and mobile-friendly layout.
+    </p>
+
+    <a href="https://github.com/aditijodh28/portfolio"
+       target="_blank"
+       class="btn">
+       GitHub
+    </a>
+
+  </div>
+
+</div>
+
+      <div class="project-card">
+
+  <img src="careerpilotAI.png" alt="CareerPilot AI">
+
+  <div class="project-content">
+
+    <h3>CareerPilot AI</h3>
+
+    <p>
+      AI-powered placement preparation platform developed using
+      Streamlit and OpenAI API featuring resume analysis,
+      interview question generation, aptitude MCQs,
+      personalized learning roadmaps, and an AI career guidance chatbot.
+    </p>
+
+    <a href="https://github.com/aditijodh28"
+       target="_blank"
+       class="btn">
+       GitHub
+    </a>
+
+  </div>
+
+</div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+  <h2 class="title">Certifications & Achievements</h2>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+
+  <img src="nptel.png" alt="NPTEL DBMS Certificate">
+
+  <div class="project-content">
+
+    <h3>NPTEL DBMS Certification</h3>
+
+    <p>
+      Successfully completed the NPTEL Database Management System
+      certification course with strong understanding of SQL,
+      normalization, transactions, ER models, and database concepts.
+    </p>
+
+    <a href="Data Base Management System.pdf"
+       target="_blank"
+       class="btn">
+       View Certificate
+    </a>
+
+  </div>
+
+</div>
+    <div class="project-card">
+
+  <img src="lpf.png" alt="LPF Scholarship">
+
+  <div class="project-content">
+
+    <h3>LPF Scholarship</h3>
+
+    <p>
+      Awarded the LPF Scholarship in recognition of academic excellence,
+      dedication to continuous learning, and consistent performance
+      throughout the academic journey.
+    </p>
+
+    <a href="LPF.pdf"
+       target="_blank"
+       class="btn">
+       View Certificate
+    </a>
+
+  </div>
+
+</div>
+</section>
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <p><i class="fas fa-envelope"></i> aditivjodhif@gmail.com</p>
+
+    <p><i class="fas fa-location-dot"></i> Maharashtra, India</p>
+
+    <div class="socials">
+
+      <a href="https://github.com/aditijodh28">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/aditi-jodh-957318378">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="mailto:aditivjodhif@gmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Aditi Jodh | All Rights Reserved
+  </footer>
+
+</body>
+</html>
