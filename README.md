@@ -13,7 +13,6 @@ A modern, responsive, and professional portfolio website showcasing my skills, p
 - About Me Section
 - Skills & Technologies Showcase
 - Projects Portfolio
-- Education Timeline
 - Resume Download Option
 - Contact Form
 - Social Media Integration
@@ -35,17 +34,6 @@ A modern, responsive, and professional portfolio website showcasing my skills, p
 - VS Code
 
 
-## 🎯 Skills Highlighted
-
-- Frontend Development
-- React.js Development
-- Responsive Web Design
-- JavaScript Programming
-- Problem Solving
-- Data Structures & Algorithms
-- Git & GitHub
-- UI/UX Design
-
 ## 📸 Portfolio Sections
 
 ### Home
@@ -66,18 +54,6 @@ Downloadable resume for recruiters.
 ### Contact
 Easy ways to connect and collaborate.
 
-## 💼 Featured Projects
-
-### College Discovery Platform
-A smart platform that helps students discover, compare, and explore colleges based on placements, fees, courses, and ratings.
-
-**Tech Used:** React, JavaScript, Tailwind CSS
-
-### Additional Projects
-- Web Development Projects
-- Academic Projects
-- Mini Applications
-- Problem Solving Solutions
 
 ## 📈 Future Improvements
 
