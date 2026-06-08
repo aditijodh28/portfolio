@@ -54,6 +54,25 @@ Downloadable resume for recruiters.
 ### Contact
 Easy ways to connect and collaborate.
 
+## 📸 Portfolio Preview
+
+### Home Page
+![Home Page](./screenshots/homepage.png)
+
+### About Section
+![About Section](./screenshots/about.png)
+
+### Skills Section
+![Skills Section](./screenshots/skills.png)
+
+### Projects Section
+![Projects Section](./screenshots/projects.png)
+
+### Certification Section
+![Certification Section](./screenshots/certification.png)
+
+### Contact Section
+![Contact Section](./screenshots/contact.png)
 
 ## 📈 Future Improvements
 
